@@ -1,0 +1,99 @@
+﻿@model IEnumerable<EcommerceProject.Models.Cart>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>My Cart</h1>
+<table class="table">
+    <tr>
+        <th>
+            <p>
+                <a asp-action="DeleteMult">Delete Multiple</a>
+            </p>
+        </th>
+        <th>
+            <p>
+                Quantity: @ViewBag.quantity
+            </p>
+        </th>
+        <th>
+            <p>
+                Subtotal: @ViewBag.subtotal
+            </p>
+        </th>
+        <th>
+            <p>
+                Tax: @ViewBag.tax
+            </p>
+        </th>
+        <th>
+            <p>
+                Total: @ViewBag.total
+            </p>
+        </th>
+        <th>
+            <a class="btn btn-primary" asp-action="CheckOut">Check Out</a>
+        </th>
+    </tr>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subtotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.timeStamp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prod.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.count)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subtotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.timeStamp)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

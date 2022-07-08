@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EcommerceProject.Models.Cart>
+
+@{
+    ViewData["Title"] = "DeleteMult";
+}
+
+<h1>My Cart</h1>
+<form method="post" action="DeleteMult">
+    <table class="table">
+        <tr>
+            <th>
+                <p>
+                    <a asp-controller="Cart" asp-action="Index">Go Back</a>
+                </p>
+            </th>
+            <th>
+                <p>
+                    <input type="submit" class="btn btn-danger" value="Submit"/>
+                </p>
+            </th>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.userId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.prod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.count)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.subtotal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.total)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.timeStamp)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.EditorForModel()
+        </tbody>
+    </table>
+</form>
