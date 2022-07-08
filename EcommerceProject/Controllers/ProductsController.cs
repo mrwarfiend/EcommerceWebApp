@@ -19,7 +19,7 @@ namespace EcommerceProject.Controllers
         {
             _context = context;
         }
-
+        
         // GET: Products
         public async Task<IActionResult> Index()
         {
@@ -49,6 +49,13 @@ namespace EcommerceProject.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
+            string[] filepaths = Directory.GetFiles("wwwroot/Images/");
+            List<string> imgs = new List<string>();
+            foreach (string filepath in filepaths)
+            {
+                imgs.Add(filepath.Remove(0, 7));
+            }
+            ViewBag.imgs = new SelectList(imgs);
             ViewData["categId"] = new SelectList(_context.category, "id", "name");
             return View();
         }
@@ -74,10 +81,21 @@ namespace EcommerceProject.Controllers
 
         }
 
+        public async Task<IActionResult> Upload()
+        {
+            return View();
+        }
+
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            
+            string[] filepaths = Directory.GetFiles("wwwroot/Images/");
+            List<string> imgs = new List<string>();
+            foreach (string filepath in filepaths)
+            {
+                imgs.Add(filepath.Remove(0, 7));
+            }
+            ViewBag.imgs = new SelectList(imgs);
             ViewData["categId"] = new SelectList(_context.category, "id", "name");
             return View(_context.product.Find(id));
         }

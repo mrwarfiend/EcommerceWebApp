@@ -52,6 +52,12 @@
                         @Html.DisplayFor(model => model.total)
                         @Html.HiddenFor(e=>e.total)
                     </dd>
+                    <dt>
+                        @Html.DisplayNameFor(e=>e.prod.img)
+                    </dt>
+                    <dd>
+                        <img width="100" height="100" src="@Model.prod.img.ToString()" alt="pic" asp-append-version="true"/>
+                    </dd>
                 </dl>
             </div>
             <div class="form-group">

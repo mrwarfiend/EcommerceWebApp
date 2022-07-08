@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SeZ3dWOcg7NV+eC+/myETNDLrjBigo13YYloNo4mtgs=",
+  "Hash": "XqF4BD68V5j+8hxGPCE1l3csLmxsVmx6TY1zaXT6woU=",
   "Source": "EcommerceProject",
   "BasePath": "_content/EcommerceProject",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Air1Jordan.png"
+    },
+    {
+      "Identity": "C:\\GenSpark\\Learning\\week4\\EcommerceProject\\EcommerceProject\\wwwroot\\Images\\BirkenStock.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GenSpark\\Learning\\week4\\EcommerceProject\\EcommerceProject\\wwwroot\\",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "Images/BirkenStock.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BirkenStock.png"
+    },
+    {
+      "Identity": "C:\\GenSpark\\Learning\\week4\\EcommerceProject\\EcommerceProject\\wwwroot\\Images\\HighTopVans.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GenSpark\\Learning\\week4\\EcommerceProject\\EcommerceProject\\wwwroot\\",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "Images/HighTopVans.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\HighTopVans.png"
     },
     {
       "Identity": "C:\\GenSpark\\Learning\\week4\\EcommerceProject\\EcommerceProject\\wwwroot\\js\\site.js",

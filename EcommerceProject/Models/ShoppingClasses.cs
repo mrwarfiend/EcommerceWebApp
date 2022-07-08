@@ -45,7 +45,6 @@ namespace EcommerceProject.Models
         [NotMapped]
         public IFormFile imgFile { get; set; }
     }
-
     public class Inventory
     {
         public int id { get; set; }
